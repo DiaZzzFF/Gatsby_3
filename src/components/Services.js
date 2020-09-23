@@ -24,7 +24,7 @@ const Services = () => {
               <p>{text}</p>
             </article>
           );
-        })};
+        })}
       </div>
     </section>
   );
