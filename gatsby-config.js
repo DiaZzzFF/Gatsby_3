@@ -4,14 +4,16 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+/* eslint-disable no-undef */
+
 module.exports = {
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is WebDev Portfolio Site",
-    author: "@webdev",
-    twitterUsername: "@john_smilga",
-    image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    title: `WebDev Portfolio`,
+    description: `This is WebDev Portfolio Site`,
+    author: `@webdev`,
+    twitterUsername: `@john_smilga`,
+    image: `/twitter-img.png`,
+    siteUrl: `https://testing-strapi-gatsby-build.netlify.app`,
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -23,6 +25,18 @@ module.exports = {
       options: {
         name: `assets`,
         path: `${__dirname}/src/assets/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-eslint`,
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: [`develop`],
+        options: {
+          emitWarning: true,
+          failOnError: false,
+        },
       },
     },
     {
@@ -52,4 +66,4 @@ module.exports = {
     //   },
     // },
   ],
-}
+};
