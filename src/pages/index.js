@@ -13,6 +13,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <Hero />
+
+      <Services />
     </Layout>
   );
 };

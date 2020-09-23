@@ -32,7 +32,7 @@ const Hero = () => {
       <div className="section-center hero-center">
         <article className="hero-info">
           <div>
-            <div className="underline"></div>
+            <div className="underline" />
 
             <h1>i'm john</h1>
 
@@ -45,6 +45,7 @@ const Hero = () => {
             <SocialLinks />
           </div>
         </article>
+
         <Image className="hero-img" fluid={fluid} />
       </div>
     </header>
