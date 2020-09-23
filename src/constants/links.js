@@ -33,11 +33,12 @@ const data = [
 const tempLinks = data.map((link) => {
   return (
     <li key={link.id}>
-      <Link to={link.url}>{link.text}</Link>
+      <Link to={link.url}>
+        {link.text}
+      </Link>
     </li>
   );
 });
-
 
 const PageLinks = ({styleClass}) => {
   return (

@@ -12,7 +12,7 @@ import Blogs from "../components/Blogs";
 const IndexPage = () => {
   return (
     <Layout>
-      index page
+      <Hero />
     </Layout>
   );
 };
