@@ -9,7 +9,13 @@ import Projects from "../components/Projects";
 import Blogs from "../components/Blogs";
 
 
-const IndexPage = () => {
+const IndexPage = ({data}) => {
+  const {
+    allStrapiProjects: {
+      nodes: projects
+    }
+  } = data;
+
   return (
     <Layout>
       <Hero />
@@ -17,11 +23,42 @@ const IndexPage = () => {
       <Services />
 
       <Jobs />
+
+      <Projects
+        title="featured projects"
+        projects={projects}
+        showLink
+      />
     </Layout>
   );
 };
 
-// ...GatsbyImageSharpFluid
+export const query = graphql`
+  {
+    allStrapiProjects(filter: {featured: {eq: true}}) {
+      nodes {
+        id
+        strapiId
+        title
+        description
+        github
+        url
+        featured
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        stack {
+          id
+          title
+        }
+      }
+    }
+  }
+`;
 
 
 export default IndexPage;
