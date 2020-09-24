@@ -13,6 +13,9 @@ const IndexPage = ({data}) => {
   const {
     allStrapiProjects: {
       nodes: projects
+    },
+    allStrapiBlogs: {
+      nodes: blogs
     }
   } = data;
 
@@ -27,6 +30,12 @@ const IndexPage = ({data}) => {
       <Projects
         title="featured projects"
         projects={projects}
+        showLink
+      />
+
+      <Blogs
+        title="latest articles"
+        blogs={blogs}
         showLink
       />
     </Layout>
@@ -54,6 +63,23 @@ export const query = graphql`
         stack {
           id
           title
+        }
+      }
+    }
+    allStrapiBlogs(sort: {fields: date, order: DESC}, limit: 3) {
+      nodes {
+        slug
+        desc
+        date(formatString: "MMMM Do, YYYY")
+        id
+        title
+        category
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
