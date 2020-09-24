@@ -33,12 +33,12 @@ const IndexPage = ({data}) => {
   );
 };
 
+
 export const query = graphql`
   {
     allStrapiProjects(filter: {featured: {eq: true}}) {
       nodes {
         id
-        strapiId
         title
         description
         github
@@ -59,6 +59,5 @@ export const query = graphql`
     }
   }
 `;
-
 
 export default IndexPage;
