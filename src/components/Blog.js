@@ -12,13 +12,15 @@ const Blog = ({slug, id, image, title, desc, category, date}) => {
       key={id}
     >
       <article>
-        <Image
-          className="blog-img"
-          fluid={image.childImageSharp.fluid}
-        />
+        {image && (
+          <Image
+            className="blog-img"
+            fluid={image.childImageSharp.fluid}
+          />
+        )}
 
         <div className="blog-card">
-          <h4>{title}</h4>
+          <h4>{title || `default title`}</h4>
 
           <p>{desc}</p>
 
@@ -33,7 +35,15 @@ const Blog = ({slug, id, image, title, desc, category, date}) => {
   );
 };
 
-Blog.propTypes = {};
+Blog.propTypes = {
+  slug: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+};
 
 
 export default Blog;
