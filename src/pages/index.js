@@ -7,6 +7,7 @@ import Services from "../components/Services";
 import Jobs from "../components/Jobs";
 import Projects from "../components/Projects";
 import Blogs from "../components/Blogs";
+import SEO from "../components/SEO";
 
 
 const IndexPage = ({data}) => {
@@ -21,6 +22,11 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout>
+      <SEO
+        title="Home"
+        description="this is our home page"
+      />
+
       <Hero />
 
       <Services />

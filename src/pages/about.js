@@ -4,6 +4,7 @@ import Image from "gatsby-image";
 
 import Layout from "../components/Layout";
 import Title from "../components/Title";
+import SEO from "../components/SEO";
 
 
 const AboutPage = ({data}) => {
@@ -16,6 +17,11 @@ const AboutPage = ({data}) => {
 
   return (
     <Layout>
+      <SEO
+        title="About Me"
+        description="about webdev"
+      />
+
       <section className="about-page">
         <div className="section-center about-center">
           <Image

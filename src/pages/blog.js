@@ -3,6 +3,7 @@ import {graphql} from "gatsby";
 
 import Layout from "../components/Layout";
 import Blogs from "../components/Blogs";
+import SEO from "../components/SEO";
 
 
 const BlogPage = ({data}) => {
@@ -14,6 +15,8 @@ const BlogPage = ({data}) => {
 
   return (
     <Layout>
+      <SEO title="Blog" />
+
       <section className="blog-page">
         <Blogs
           title="blog"

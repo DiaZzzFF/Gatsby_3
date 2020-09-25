@@ -3,6 +3,7 @@ import {graphql} from "gatsby";
 
 import Layout from "../components/Layout";
 import Projects from "../components/Projects";
+import SEO from "../components/SEO";
 
 
 const ProjectsPage = ({data}) => {
@@ -14,6 +15,8 @@ const ProjectsPage = ({data}) => {
 
   return (
     <Layout>
+      <SEO title="Projects" />
+
       <section className="projects-page">
         <Projects
           title="all projects"

@@ -3,13 +3,19 @@ import {graphql, Link} from "gatsby";
 import ReactMarkdown from "react-markdown";
 
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 
 const BlogTemplate = ({data}) => {
-  const {content} = data.blog;
+  const {title, desc, content} = data.blog;
 
   return (
     <Layout>
+      <SEO
+        title={title}
+        description={desc}
+      />
+
       <section className="blog-template">
         <div className="section-center">
           <article className="blog-content">
@@ -32,6 +38,8 @@ const BlogTemplate = ({data}) => {
 export const query = graphql`
   query GetSingleBlog($slug: String) {
     blog: strapiBlogs(slug: {eq: $slug}) {
+      title
+      desc
       content
     }
   }

@@ -8,6 +8,8 @@ import SEO from "../components/SEO";
 const ErrorPage = () => {
   return (
     <Layout>
+      <SEO title="Dead End" />
+
       <main className="error-page">
         <div className="error-container">
           <h1>oops it&apos;s a dead end</h1>
