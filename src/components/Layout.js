@@ -4,8 +4,6 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 
-// import "../css/main.css"
-
 
 const Layout = ({children}) => {
   const [isOpen, setIsOpen] = React.useState(false);
