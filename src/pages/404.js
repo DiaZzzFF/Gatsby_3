@@ -1,10 +1,25 @@
-import React from "react"
-import Layout from "../components/Layout"
-import { Link } from "gatsby"
-import SEO from "../components/SEO"
+import React from "react";
+import {Link} from "gatsby";
 
-const Error = () => {
-  return <h2>error page</h2>
-}
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
-export default Error
+
+const ErrorPage = () => {
+  return (
+    <Layout>
+      <main className="error-page">
+        <div className="error-container">
+          <h1>oops it&apos;s a dead end</h1>
+
+          <Link className="btn" to="/">
+            back home
+          </Link>
+        </div>
+      </main>
+    </Layout>
+  );
+};
+
+
+export default ErrorPage;
