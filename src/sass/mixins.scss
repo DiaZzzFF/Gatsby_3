@@ -1,0 +1,29 @@
+@mixin wrapper {
+  margin: 0 auto;
+}
+
+@mixin ul-style {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+// h1-h4
+@mixin heading {
+  margin: 0;
+  margin-bottom: 12px;
+
+  line-height: 1.25;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 3.2px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+// p
+@mixin paragraph {
+  margin-bottom: 20px;
+
+  color: $gray-2;
+}
