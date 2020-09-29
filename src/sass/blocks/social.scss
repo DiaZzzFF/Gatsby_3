@@ -1,0 +1,31 @@
+.social__list {
+  @include ul-style;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 240px;
+}
+
+.social__link {
+  display: block;
+
+  padding: 5px 6px 1px;
+
+  color: $gray-1;
+
+  transition: all 0.3s linear;
+
+  &:hover {
+    color: $cyan-1;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.social__icon {
+  width: 28px;
+  height: 28px;
+}

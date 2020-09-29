@@ -30,20 +30,18 @@ const data = [
   },
 ];
 
-const tempLinks = data.map((link) => {
+const PageLinks = ({listClass, itemClass, linkClass}) => {
   return (
-    <li key={link.id}>
-      <Link to={link.url}>
-        {link.text}
-      </Link>
-    </li>
-  );
-});
-
-const PageLinks = ({styleClass}) => {
-  return (
-    <ul className={`page-links ${styleClass ? styleClass : ``}`}>
-      {tempLinks}
+    <ul className={`${listClass ? listClass : ``}`}>
+      {data.map((link) => {
+        return (
+          <li className={`${itemClass ? itemClass : ``}`} key={link.id}>
+            <Link className={`${linkClass ? linkClass : ``}`} to={link.url}>
+              {link.text}
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 };

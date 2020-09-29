@@ -11,45 +11,43 @@ import {
 const data = [
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon" />,
+    icon: <FaFacebookSquare className="social__icon" />,
     url: `https://www.twitter.com`,
   },
   {
     id: 2,
-    icon: <FaLinkedin className="social-icon" />,
+    icon: <FaLinkedin className="social__icon" />,
     url: `https://www.twitter.com`,
   },
   {
     id: 3,
-    icon: <FaDribbbleSquare className="social-icon" />,
+    icon: <FaDribbbleSquare className="social__icon" />,
     url: `https://www.twitter.com`,
   },
   {
     id: 4,
-    icon: <FaBehanceSquare className="social-icon" />,
+    icon: <FaBehanceSquare className="social__icon" />,
     url: `https://www.twitter.com`,
   },
   {
     id: 5,
-    icon: <FaTwitterSquare className="social-icon" />,
+    icon: <FaTwitterSquare className="social__icon" />,
     url: `https://www.twitter.com`,
   },
 ];
 
-const links = data.map((link) => {
+const SocialLinks = ({listClass, itemClass, linkClass}) => {
   return (
-    <li key={link.id}>
-      <a className="social-link" href={link.url}>
-        {link.icon}
-      </a>
-    </li>
-  );
-});
-
-const SocialLinks = ({styleClass}) => {
-  return (
-    <ul className={`social-links ${styleClass ? styleClass : ``}`}>
-      {links}
+    <ul className={`social__list ${listClass ? listClass : ``}`}>
+      {data.map((link) => {
+        return (
+          <li className={`social__item ${itemClass ? itemClass : ``}`} key={link.id}>
+            <a className={`social__link ${linkClass ? linkClass : ``}`} href={link.url}>
+              {link.icon}
+            </a>
+          </li>
+        );
+      })}
     </ul>
   );
 };

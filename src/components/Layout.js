@@ -1,23 +1,17 @@
 import React from "react";
 
-import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 
 const Layout = ({children}) => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <>
-      <Navbar toggleSidebar={toggleSidebar} />
+      <Header />
 
-      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-
-      {children}
+      <main className="main">
+        {children}
+      </main>
 
       <Footer />
     </>

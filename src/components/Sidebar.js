@@ -1,25 +1,33 @@
-import { Link } from "gatsby";
 import React from "react";
 import {FaTimes} from "react-icons/fa";
 
-import PageLinks from "../constants/links";
+import PageLinks from "../constants/pageLinks";
 import SocialLinks from "../constants/socialLinks";
 
 
 const Sidebar = ({isOpen, toggleSidebar}) => {
   return (
-    <aside className={`sidebar ${(isOpen) ? `show-sidebar` : ``} `}>
+    <aside className={`sidebar ${(isOpen) ? `sidebar--show` : ``} `}>
       <button
-        className="close-btn"
+        className="sidebar__close"
         type="button"
         onClick={toggleSidebar}
       >
-        <FaTimes />
+        <FaTimes className="sidebar__close-img" />
       </button>
 
-      <div className="side-container">
-        <PageLinks styleClass={`${isOpen ? `sidebar-links` : ``}`} />
-        <SocialLinks styleClass={`${isOpen ? `sidebar-icons` : ``}`} />
+      <div className="sidebar__links-box">
+        <PageLinks
+          listClass={`${isOpen ? `sidebar__list` : ``}`}
+          itemClass={`${isOpen ? `sidebar__item` : ``}`}
+          linkClass={`${isOpen ? `sidebar__link` : ``}`}
+        />
+
+        <SocialLinks
+          listClass={`${isOpen ? `sidebar__social-list` : ``}`}
+          itemClass={`${isOpen ? `sidebar__social-item` : ``}`}
+          linkClass={`${isOpen ? `sidebar__social-link` : ``}`}
+        />
       </div>
     </aside>
   );

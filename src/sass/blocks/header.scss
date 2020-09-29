@@ -1,0 +1,17 @@
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+
+  width: 100%;
+
+  background-color: transparent;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .header {
+    background-color: white;
+  }
+}
