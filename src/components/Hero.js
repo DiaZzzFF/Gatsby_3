@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "gatsby-image";
-import {Link} from "gatsby";
-import {graphql, useStaticQuery} from "gatsby";
+import {Link, graphql, useStaticQuery} from "gatsby";
 
 import SocialLinks from "../constants/socialLinks";
 
@@ -28,27 +27,29 @@ const Hero = () => {
   } = useStaticQuery(query);
 
   return (
-    <header className="hero">
-      <div className="section-center hero-center">
-        <article className="hero-info">
-          <div>
-            <div className="underline" />
+    <section className="hero">
+      <div className="hero__wrapper">
+        <article className="hero__info">
+          <span className="hero__underline" />
 
-            <h1>i'm john</h1>
+          <h2 className="hero__heading">
+            i&apos;m john
+          </h2>
 
-            <h4>freelance web and mobile UI/UX Designer</h4>
+          <strong className="hero__strong">
+            freelance web and mobile UI/UX Designer
+          </strong>
 
-            <Link className="btn" to="/contact/">
-              contact me
-            </Link>
+          <Link className="hero__btn" to="/contact/">
+            contact me
+          </Link>
 
-            <SocialLinks />
-          </div>
+          <SocialLinks />
         </article>
 
-        <Image className="hero-img" fluid={fluid} />
+        <Image className="hero__img" fluid={fluid} />
       </div>
-    </header>
+    </section>
   );
 };
 
