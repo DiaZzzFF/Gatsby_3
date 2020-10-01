@@ -1,0 +1,15 @@
+.title-box {
+  margin-bottom: 64px;
+
+  text-align: center;
+}
+
+.title {
+  @include heading;
+
+  font-size: 40px;
+}
+
+.title__underline {
+  @include underline;
+}

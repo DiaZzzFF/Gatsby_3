@@ -1,14 +1,14 @@
 import React from "react";
 
 
-const Title = ({title}) => {
+const Title = ({myTitle, boxClass, headingClass, underlineClass}) => {
   return (
-    <div className="section-title">
-      <h2>
-        {title || `default title`}
+    <div className={`title-box ${boxClass ? boxClass : ``}`}>
+      <h2 className={`title ${headingClass ? headingClass : ``}`}>
+        {myTitle || `default title`}
       </h2>
 
-      <div className="underline" />
+      <span className={`title__underline ${underlineClass ? underlineClass : ``}`} />
     </div>
   );
 };

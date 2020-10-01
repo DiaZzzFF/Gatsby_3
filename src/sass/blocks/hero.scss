@@ -27,16 +27,13 @@
 }
 
 .hero__wrapper {
-  @include wrapper;
+  @include section-wrapper;
 
   z-index: 2;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  max-width: 1170px;
-  width: 95%;
 }
 
 .hero__info {
@@ -57,21 +54,19 @@
   margin-bottom: 8px;
 }
 
-.hero__heading,
-.hero__strong {
+.hero__name,
+.hero__profession {
   @include heading;
 
   text-align: left;
   line-height: 1;
 }
 
-.hero__heading{
+.hero__name{
   font-size: 64px;
 }
 
-.hero__strong {
-  display: block;
-
+.hero__profession {
   font-size: 16px;
   color: $gray-4;
 }
@@ -97,9 +92,9 @@
   }
 
   .hero__wrapper {
-    justify-content: center;
+    @include section-wrapper-tablet;
 
-    width: 90%;
+    justify-content: center;
   }
 
   .hero__info {
@@ -116,12 +111,12 @@
     margin-bottom: 8px;
   }
 
-  .hero__heading,
-  .hero__strong {
+  .hero__name,
+  .hero__profession {
     text-align: center;
   }
 
-  .hero__strong {
+  .hero__profession {
     font-size: 13.6px;
   }
 

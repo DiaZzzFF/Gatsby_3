@@ -1,6 +1,6 @@
 import React from "react";
 
-import SocialLinks from "../constants/socialLinks";
+import SocialLinks from "../components/SocialLinks";
 
 
 const Footer = () => {

@@ -1,8 +1,8 @@
 import React from "react";
 import {FaTimes} from "react-icons/fa";
 
-import PageLinks from "../constants/pageLinks";
-import SocialLinks from "../constants/socialLinks";
+import PageLinks from "../components/PageLinks";
+import SocialLinks from "../components/SocialLinks";
 
 
 const Sidebar = ({isOpen, toggleSidebar}) => {

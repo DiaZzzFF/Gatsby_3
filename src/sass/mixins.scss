@@ -9,6 +9,17 @@
   list-style: none;
 }
 
+@mixin section-wrapper {
+  margin: 0 auto;
+
+  max-width: 1170px;
+  width: 95%;
+}
+
+@mixin section-wrapper-tablet {
+  width: 90%;
+}
+
 // h1-h4
 @mixin heading {
   margin: 0;

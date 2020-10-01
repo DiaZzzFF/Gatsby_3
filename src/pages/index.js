@@ -27,6 +27,8 @@ const IndexPage = ({data}) => {
         description="this is our home page"
       />
 
+      <h1 className="visually-hidden">Portfolio</h1>
+
       <Hero />
 
       <Services />

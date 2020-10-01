@@ -2,7 +2,7 @@ import React from "react";
 import Image from "gatsby-image";
 import {Link, graphql, useStaticQuery} from "gatsby";
 
-import SocialLinks from "../constants/socialLinks";
+import SocialLinks from "../components/SocialLinks";
 
 
 const query = graphql`
@@ -28,17 +28,19 @@ const Hero = () => {
 
   return (
     <section className="hero">
+      <h2 className="visually-hidden">Hero info</h2>
+
       <div className="hero__wrapper">
         <article className="hero__info">
           <span className="hero__underline" />
 
-          <h2 className="hero__heading">
+          <h3 className="hero__name">
             i&apos;m john
-          </h2>
+          </h3>
 
-          <strong className="hero__strong">
+          <h4 className="hero__profession">
             freelance web and mobile UI/UX Designer
-          </strong>
+          </h4>
 
           <Link className="hero__btn" to="/contact/">
             contact me

@@ -1,31 +1,21 @@
 import React from "react";
 
 import Title from "../components/Title";
-import services from "../constants/services";
+import ServiceCards from "../components/ServiceCards";
 
 
 const Services = () => {
   return (
-    <section className="section bg-grey">
-      <Title title="services" />
+    <section className="services">
+      <Title myTitle="services" />
 
-      <div className="section-center services-center">
-        {services.map((service) => {
-          const {id, icon, title, text} = service;
-
-          return (
-            <article className="service" key={id}>
-              {icon}
-
-              <h4>{title}</h4>
-
-              <div className="underline" />
-
-              <p>{text}</p>
-            </article>
-          );
-        })}
-      </div>
+      <ServiceCards
+        listClass="services__list"
+        itemClass="services__item"
+        headingClass="services__heading"
+        underlineClass="services__underline"
+        textClass="services__text"
+      />
     </section>
   );
 };

@@ -3,7 +3,7 @@ import {Link} from "gatsby";
 import {FaAlignRight} from "react-icons/fa";
 
 import logo from "../assets/logo.svg";
-import PageLinks from "../constants/pageLinks";
+import PageLinks from "../components/PageLinks";
 
 
 const Navbar = ({toggleSidebar}) => {
