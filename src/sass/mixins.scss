@@ -72,4 +72,8 @@
 
     background-color: $cyan-6;
   }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

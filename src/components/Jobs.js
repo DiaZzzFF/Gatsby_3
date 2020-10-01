@@ -1,6 +1,5 @@
 import React from "react";
-import {Link} from "gatsby";
-import {graphql, useStaticQuery} from "gatsby";
+import {Link, graphql, useStaticQuery} from "gatsby";
 import {FaAngleDoubleRight} from "react-icons/fa";
 
 import Title from "../components/Title";
@@ -34,17 +33,15 @@ const Jobs = () => {
   const {company, date, position, desc} = jobs[value];
 
   return (
-    <section className="section jobs">
-      <Title title="expierence" />
+    <section className="jobs">
+      <Title myTitle="expierence" />
 
-      <div className="jobs-center">
-        {/* btn container */}
-
-        <div className="btn-container">
+      <div className="jobs__wrapper">
+        <div className="jobs__btn-box">
           {jobs.map((item, index) => {
             return (
               <button
-                className={`job-btn ${index === value && `active-btn`}`}
+                className={`jobs__btn ${index === value && `jobs__btn--active`}`}
                 key={item.strapiId}
                 onClick={() => setValue(index)}
               >
@@ -54,28 +51,34 @@ const Jobs = () => {
           })}
         </div>
 
-        {/* job info */}
+        <article className="jobs__info">
+          <h3 className="jobs__heading">
+            {position}
+          </h3>
 
-        <article className="job-info">
-          <h3>{position}</h3>
+          <h4 className="jobs__subtitle">
+            {company}
+          </h4>
 
-          <h4>{company}</h4>
-
-          <p className="job-date">{date}</p>
+          <p className="jobs__date">
+            {date}
+          </p>
 
           {desc.map((item) => {
             return (
-              <div className="job-desc" key={item.id}>
-                <FaAngleDoubleRight className="job-icon" />
+              <div className="jobs__text-box" key={item.id}>
+                <FaAngleDoubleRight className="jobs__icon" />
 
-                <p>{item.name}</p>
+                <p className="jobs__text">
+                  {item.name}
+                </p>
               </div>
             );
           })}
         </article>
       </div>
 
-      <Link className="btn center-btn" to="/about">
+      <Link className="jobs__link" to="/about">
         more info
       </Link>
     </section>

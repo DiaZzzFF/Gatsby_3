@@ -68,6 +68,14 @@
   display: none;
 }
 
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .navbar {
+    @include section-wrapper-tablet;
+  }
+}
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 @media (max-width: $mobile-width) {
