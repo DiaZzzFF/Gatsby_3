@@ -7,41 +7,41 @@ import {FaGithubSquare, FaShareSquare} from "react-icons/fa";
 const Project = ({image, index, title, description, stack, github, url}) => {
   return (
     <article className="project">
-      {image && (
-        <Image
-          className="project-img"
-          fluid={image.childImageSharp.fluid}
-        />
-      )}
+      <Image
+        className="project__img project-img"
+        fluid={image.childImageSharp.fluid}
+      />
 
-      <div className="project-info">
-        <span className="project-number">
+      <div className="project__box project-info">
+        <span className="project__number project-number">
           0{index + 1}.
         </span>
 
-        <h3>{title || `default title`}</h3>
+        <h3 className="project__heading">
+          {title}
+        </h3>
 
-        <p className="project-desc">
+        <p className="project__text project-desc">
           {description}
         </p>
 
-        <div className="project-stack">
+        <div className="project__stack-box project-stack">
           {stack.map((item) => {
             return (
-              <span key={item.id}>
+              <span className="project__stack" key={item.id}>
                 {item.title}
               </span>
             );
           })}
         </div>
 
-        <div className="project-links">
-          <a href={github}>
-            <FaGithubSquare className="project-icon" />
+        <div className="project__link-box project-links">
+          <a className="project__link project__link--github" href={github}>
+            <FaGithubSquare className="project__icon project-icon" />
           </a>
 
-          <a href={url}>
-            <FaShareSquare className="project-icon" />
+          <a className="project__link project__link--share" href={url}>
+            <FaShareSquare className="project__icon project-icon" />
           </a>
         </div>
       </div>

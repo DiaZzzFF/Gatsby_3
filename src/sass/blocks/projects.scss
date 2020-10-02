@@ -1,0 +1,22 @@
+.projects {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.projects__wrapper {
+  @include section-wrapper;
+
+  margin-bottom: 48px;
+}
+
+.projects__link {
+  @include btn;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .projects__wrapper {
+    @include section-wrapper-tablet;
+  }
+}

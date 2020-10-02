@@ -42,7 +42,7 @@ const Hero = () => {
             freelance web and mobile UI/UX Designer
           </h4>
 
-          <Link className="hero__btn" to="/contact/">
+          <Link className="hero__link" to="/contact/">
             contact me
           </Link>
 

@@ -109,13 +109,6 @@
 
 .jobs__link {
   @include btn;
-  @include wrapper;
-
-  display: block;
-
-  width: 192px;
-  
-  text-align: center;
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */

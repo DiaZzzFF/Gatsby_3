@@ -7,10 +7,10 @@ import Project from "../components/Project";
 
 const Projects = ({title, projects, showLink}) => {
   return (
-    <section className="section projects">
-      <Title title={title} />
+    <section className="projects">
+      <Title myTitle={title} />
 
-      <div className="section-center projects-center">
+      <div className="projects__wrapper">
         {projects.map((project, index) => {
           return (
             <Project
@@ -23,7 +23,7 @@ const Projects = ({title, projects, showLink}) => {
       </div>
 
       {showLink && (
-        <Link className="btn center-btn" to="/projects">
+        <Link className="projects__link" to="/projects">
           projects
         </Link>
       )}

@@ -14,13 +14,13 @@
   background-color: $cyan-4;
 
   &::before {
+    content: "";
+
     position: absolute;
     top: 0;
     left: 65%;
     right: 0;
     bottom: 0;
-
-    content: "";
 
     background: white;
   }
@@ -71,9 +71,10 @@
   color: $gray-4;
 }
 
-.hero__btn {
+.hero__link {
   @include btn;
 
+  width: auto;
   margin: 20px 0;
 }
 
