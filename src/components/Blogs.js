@@ -5,12 +5,12 @@ import Title from "../components/Title";
 import Blog from "../components/Blog";
 
 
-const Blogs = ({title, blogs, showLink, bgPageList, bgPageItem}) => {
+const Blogs = ({title, blogs, showLink, bgPageList, wrapperPage, bgPageItem}) => {
   return (
     <section className={`blogs ${bgPageList ? bgPageList : ``}`}>
       <Title myTitle={title} />
 
-      <div className="blogs__wrapper">
+      <div className={`blogs__wrapper ${wrapperPage ? wrapperPage : ``}`}>
         {blogs.map((blog) => {
           return (
             <Blog

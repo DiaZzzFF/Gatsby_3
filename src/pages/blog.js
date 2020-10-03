@@ -21,6 +21,7 @@ const BlogPage = ({data}) => {
         title="blog"
         blogs={blogs}
         bgPageList="blogs--page"
+        wrapperPage="blogs__wrapper--page"
         bgPageItem="blog__link--page"
       />
 
