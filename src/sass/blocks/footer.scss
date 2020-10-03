@@ -1,0 +1,33 @@
+.footer {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  min-height: 144px;
+  padding: 16px;
+
+  text-align: center;
+
+  background-color: $black-1; 
+}
+
+.footer__list {
+  margin-bottom: 16px;
+}
+
+.footer__link {
+  color: white;
+}
+
+.footer__copyright {
+  @include heading;
+
+  font-size: 16px;
+  line-height: 1;
+  color: white;
+  text-transform: uppercase;
+}
+
+.footer__license {
+  color: $cyan-1;
+}

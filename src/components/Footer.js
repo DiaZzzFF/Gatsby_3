@@ -6,15 +6,16 @@ import SocialLinks from "../components/SocialLinks";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div>
-        <SocialLinks styleClass="footer-links" />
+      <SocialLinks
+        listClass="footer__list"
+        linkClass="footer__link"
+      />
 
-        <h4>
-          copyright&copy;{new Date().getFullYear()}
+      <p className="footer__copyright">
+        copyright&copy;{new Date().getFullYear()}
 
-          <span> WebDev</span> all rights reserved
-        </h4>
-      </div>
+        <span className="footer__license"> WebDev</span> all rights reserved
+      </p>
     </footer>
   );
 };
