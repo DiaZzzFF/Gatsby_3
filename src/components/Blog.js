@@ -4,30 +4,37 @@ import Image from "gatsby-image";
 import {Link} from "gatsby";
 
 
-const Blog = ({slug, id, image, title, desc, category, date}) => {
+const Blog = ({slug, id, image, title, desc, category, date, bgPageItem}) => {
   return (
     <Link
-      className="blog"
+      className={`${bgPageItem ? bgPageItem : ``}`}
       to={`/blogs/${slug}`}
       key={id}
     >
-      <article>
-        {image && (
-          <Image
-            className="blog-img"
-            fluid={image.childImageSharp.fluid}
-          />
-        )}
+      <article className="blog">
+        <Image
+          className="blog__img"
+          fluid={image.childImageSharp.fluid}
+        />
 
-        <div className="blog-card">
-          <h4>{title || `default title`}</h4>
 
-          <p>{desc}</p>
+        <div className="blog__box">
+          <h4 className="blog__heading">
+            {title}
+          </h4>
 
-          <div className="blog-footer">
-            <p>{category}</p>
+          <p className="blog__text">
+            {desc}
+          </p>
 
-            <p>{date}</p>
+          <div className="blog__row">
+            <span className="blog__category">
+              {category}
+            </span>
+
+            <span className="blog__date">
+              {date}
+            </span>
           </div>
         </div>
       </article>

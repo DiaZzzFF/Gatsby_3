@@ -5,15 +5,16 @@ import Title from "../components/Title";
 import Blog from "../components/Blog";
 
 
-export const Blogs = ({title, blogs, showLink}) => {
+const Blogs = ({title, blogs, showLink, bgPageList, bgPageItem}) => {
   return (
-    <section className="section">
-      <Title title={title} />
+    <section className={`blogs ${bgPageList ? bgPageList : ``}`}>
+      <Title myTitle={title} />
 
-      <div className="section-center blogs-center">
+      <div className="blogs__wrapper">
         {blogs.map((blog) => {
           return (
             <Blog
+              bgPageItem={`blog__link ${bgPageItem ? bgPageItem : ``}`}
               key={blog.id}
               {...blog}
             />
@@ -22,7 +23,7 @@ export const Blogs = ({title, blogs, showLink}) => {
       </div>
 
       {showLink && (
-        <Link className="btn center-btn" to="/blog">
+        <Link className="blogs__link" to="/blog">
           blog
         </Link>
       )}

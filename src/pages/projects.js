@@ -17,12 +17,11 @@ const ProjectsPage = ({data}) => {
     <Layout>
       <SEO title="Projects" />
 
-      <section className="projects-page">
-        <Projects
-          title="all projects"
-          projects={projects}
-        />
-      </section>
+      <Projects
+        title="all projects"
+        projects={projects}
+      />
+
     </Layout>
   );
 };

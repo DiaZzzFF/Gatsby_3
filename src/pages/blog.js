@@ -17,12 +17,13 @@ const BlogPage = ({data}) => {
     <Layout>
       <SEO title="Blog" />
 
-      <section className="blog-page">
-        <Blogs
-          title="blog"
-          blogs={blogs}
-        />
-      </section>
+      <Blogs
+        title="blog"
+        blogs={blogs}
+        bgPageList="blogs--page"
+        bgPageItem="blog__link--page"
+      />
+
     </Layout>
   );
 };
