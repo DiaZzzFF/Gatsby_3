@@ -17,15 +17,12 @@ const BlogTemplate = ({data}) => {
       />
 
       <section className="blog-template">
-        <div className="section-center">
-          <article className="blog-content">
+        <div className="blog-template__wrapper">
+          <article className="blog-template__content">
             <ReactMarkdown source={content} />
           </article>
 
-          <Link
-            className="btn center-btn"
-            to="/blog"
-          >
+          <Link className="blog-template__link" to="/blog">
             blog
           </Link>
         </div>

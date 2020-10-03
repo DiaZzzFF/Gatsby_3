@@ -1,0 +1,89 @@
+/* Markdown */
+
+.blog-template {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.blog-template__wrapper {
+  @include section-wrapper;
+}
+
+.blog-template__content h1,
+.blog-template__content h2 {
+  @include heading;
+
+  font-size: 64px;
+  line-height: 1;
+  text-align: center;
+}
+
+.blog-template__content h2 {
+  font-size: 40px;
+}
+
+.blog-template__content ul {
+  @include ul-style;
+
+  display: inline-block;
+
+  margin-top: 32px;
+}
+
+.blog-template__content ul li {
+  margin: 16px 0;
+  padding: 8px 16px;
+
+  font-size: 16px;
+  color: $gray-4;
+  text-transform: uppercase;
+
+  background-color: $gray-5;
+}
+
+.blog-template__content blockquote {
+  margin: 32px 0;
+  padding: 16px;
+
+  font-size: 16px;
+  line-height: 2;
+
+  background-color: $cyan-3;
+  border-radius: 4px;
+}
+
+.blog-template__content p {
+  @include paragraph;
+
+  margin-top: 0;
+}
+
+.blog-template__content pre {
+  padding: 16px 24px;
+
+  font-size: 13px;
+  color: yellow;
+
+  background-color: $black-1;
+  border-radius: 4px;
+  
+  overflow-x: scroll;
+}
+
+.blog-template__content img {
+  width: 240px;
+  height: 240px;
+  margin: 48px 0;
+}
+
+.blog-template__link {
+  @include btn;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .blog-template__wrapper {
+    @include section-wrapper-tablet;
+  }
+}
