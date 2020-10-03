@@ -10,6 +10,8 @@ const ContactPage = () => {
       <SEO title="Contact" />
 
       <section className="contact">
+        <h2 className="visually-hidden">Contact</h2>
+
         <div className="contact__wrapper">
           <h3 className="contact__heading">
             get in touch

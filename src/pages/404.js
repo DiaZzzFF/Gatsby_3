@@ -10,15 +10,19 @@ const ErrorPage = () => {
     <Layout>
       <SEO title="Dead End" />
 
-      <main className="error-page">
-        <div className="error-container">
-          <h1>oops it&apos;s a dead end</h1>
+      <section className="error">
+        <h1 className="visually-hidden">The page does not exist (404)</h1>
 
-          <Link className="btn" to="/">
+        <div className="error__wrapper error-container">
+          <h2 className="error__heading">
+            oops it&apos;s a dead end
+          </h2>
+
+          <Link className="error__btn btn" to="/">
             back home
           </Link>
         </div>
-      </main>
+      </section>
     </Layout>
   );
 };

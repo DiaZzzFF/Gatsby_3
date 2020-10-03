@@ -17,7 +17,6 @@ const Blog = ({slug, id, image, title, desc, category, date, bgPageItem}) => {
           fluid={image.childImageSharp.fluid}
         />
 
-
         <div className="blog__box">
           <h4 className="blog__heading">
             {title}
