@@ -1,0 +1,64 @@
+.about {
+  width: 100%;
+}
+
+.about__wrapper {
+  @include section-wrapper;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  column-gap: 64px;
+
+  padding: 112px 0;
+}
+
+.about__img {
+  grid-column: 1 / span 5;
+
+  height: 400px;
+}
+
+.about__box {
+  grid-column: 6 / -1;
+}
+
+.about__title-box {
+  margin-bottom: 32px;
+}
+
+.about__title {
+  text-align: left;
+}
+
+.about__underline {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.about__text {
+  @include paragraph;
+
+  font-size: 16px;
+  line-height: 2;
+}
+
+.about__stack {
+  @include stack;
+
+  margin-top: 8px;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $tablet-width) {
+  .about__wrapper {
+    @include section-wrapper-tablet;
+
+    display: block; 
+  }
+
+  .about__img {
+    margin-bottom: 32px;
+  }
+}

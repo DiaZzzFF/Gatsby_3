@@ -22,22 +22,29 @@ const AboutPage = ({data}) => {
         description="about webdev"
       />
 
-      <section className="about-page">
-        <div className="section-center about-center">
+      <section className="about">
+        <div className="about__wrapper">
           <Image
-            className="about-img"
+            className="about__img"
             fluid={image.childImageSharp.fluid}
           />
 
-          <article className="about-text">
-            <Title title={title} />
+          <article className="about__box">
+            <Title
+              boxClass="about__title-box"
+              headingClass="about__title"
+              underlineClass="about__underline"
+              myTitle={title}
+            />
 
-            <p>{info}</p>
+            <p className="about__text">
+              {info}
+            </p>
 
-            <div className="about-stack">
+            <div className="about__stack-box">
               {stack.map((item) => {
                 return (
-                  <span key={item.id}>
+                  <span className="about__stack" key={item.id}>
                     {item.title}
                   </span>
                 );
