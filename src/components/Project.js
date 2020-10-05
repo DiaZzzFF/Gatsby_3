@@ -8,12 +8,12 @@ const Project = ({image, index, title, description, stack, github, url}) => {
   return (
     <article className="project">
       <Image
-        className="project__img project-img"
+        className="project__img"
         fluid={image.childImageSharp.fluid}
       />
 
-      <div className="project__box project-info">
-        <span className="project__number project-number">
+      <div className="project__box">
+        <span className="project__number">
           0{index + 1}.
         </span>
 
@@ -21,11 +21,11 @@ const Project = ({image, index, title, description, stack, github, url}) => {
           {title}
         </h3>
 
-        <p className="project__text project-desc">
+        <p className="project__text">
           {description}
         </p>
 
-        <div className="project__stack-box project-stack">
+        <div className="project__stack-box">
           {stack.map((item) => {
             return (
               <span className="project__stack" key={item.id}>
@@ -35,13 +35,13 @@ const Project = ({image, index, title, description, stack, github, url}) => {
           })}
         </div>
 
-        <div className="project__link-box project-links">
+        <div className="project__link-box">
           <a className="project__link project__link--github" href={github}>
-            <FaGithubSquare className="project__icon project-icon" />
+            <FaGithubSquare className="project__icon" />
           </a>
 
           <a className="project__link project__link--share" href={url}>
-            <FaShareSquare className="project__icon project-icon" />
+            <FaShareSquare className="project__icon" />
           </a>
         </div>
       </div>

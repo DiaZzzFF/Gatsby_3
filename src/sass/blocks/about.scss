@@ -1,5 +1,6 @@
 .about {
   width: 100%;
+  padding: 112px 0;
 }
 
 .about__wrapper {
@@ -10,7 +11,7 @@
   align-items: center;
   column-gap: 64px;
 
-  padding: 112px 0;
+  
 }
 
 .about__img {
@@ -39,7 +40,6 @@
 .about__text {
   @include paragraph;
 
-  font-size: 16px;
   line-height: 2;
 }
 

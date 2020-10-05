@@ -4,7 +4,7 @@
   margin-bottom: 32px;
 
   background-color: $gray-3;
-  border-radius: 4px;
+  border-radius: $radius;
 
   box-shadow: $light-shadow;
   transition: $transition;
@@ -29,8 +29,8 @@
 .blog__img {
   height: 220px;
 
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
 }
 
 .blog__box {
@@ -43,8 +43,6 @@
 .blog__heading {
   @include heading;
 
-  font-size: 16px;
-  line-height: 1;
   color: $gray-1;
   text-align: left;
 }
@@ -63,8 +61,6 @@
 
 .blog__text {
   margin-top: 0;
-
-  font-size: 16px;
 }
 
 .blog__category,
@@ -87,11 +83,7 @@
   text-transform: uppercase;
 
   background-color: $gray-5;
-  border-radius: 4px;
-}
-
-.blog__date {
-  font-size: 16px;
+  border-radius: $radius;
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */

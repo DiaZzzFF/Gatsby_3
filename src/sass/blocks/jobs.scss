@@ -1,6 +1,5 @@
 .jobs {
-  width: 100%;
-  padding: 80px 0;
+  @include section;
 
   background-color: white;
 }
@@ -30,7 +29,7 @@
   font-size: 20px;
   font-family: "Arial", sans-serif;
   line-height: 1;
-  letter-spacing: 3.2px;
+  letter-spacing: $spacing;
   text-transform: capitalize;
   
   background-color: transparent;
@@ -51,18 +50,11 @@
   @include heading;
 
   text-align: left;
-  line-height: 1;
 }
 
 .jobs__heading {
   font-size: 28px;
   font-weight: 400;
-}
-
-.jobs__subtitle,
-.jobs__date,
-.jobs__text {
-  font-size: 16px;
 }
 
 .jobs__subtitle {
@@ -74,7 +66,7 @@
   text-transform: uppercase;
 
   background-color: $gray-5;
-  border-radius: 4px;
+  border-radius: $radius;
 }
 
 .jobs__date {
@@ -82,7 +74,7 @@
 
   margin-top: 0;
 
-  letter-spacing: 3.2px;
+  letter-spacing: $spacing;
 }
 
 .jobs__text-box {
@@ -133,5 +125,24 @@
     &:hover {
       box-shadow: 0 2px $cyan-1;
     }
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .jobs__btn {
+    font-size: 18px;
+  }
+
+  .jobs__heading {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .jobs__subtitle,
+  .jobs__date,
+  .jobs__text {
+    font-size: 14px;
   }
 }

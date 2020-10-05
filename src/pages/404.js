@@ -13,12 +13,12 @@ const ErrorPage = () => {
       <section className="error">
         <h1 className="visually-hidden">The page does not exist (404)</h1>
 
-        <div className="error__wrapper error-container">
+        <div className="error__wrapper">
           <h2 className="error__heading">
             oops it&apos;s a dead end
           </h2>
 
-          <Link className="error__btn btn" to="/">
+          <Link className="error__btn" to="/">
             back home
           </Link>
         </div>

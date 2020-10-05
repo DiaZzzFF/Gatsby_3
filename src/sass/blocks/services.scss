@@ -1,6 +1,5 @@
 .services {
-  width: 100%;
-  padding: 80px 0;
+  @include section;
 }
 
 .services__list {
@@ -14,7 +13,7 @@
 .services__item,
 .services__underline,
 .services__text {
-  transition: all 0.3s linear;
+  transition: $transition;
 }
 
 .services__item {
@@ -24,7 +23,7 @@
   text-align: center;
 
   background-color: white;
-  border-radius: 4px;
+  border-radius: $radius;
 
   &:hover,
   &:hover .services__text {
@@ -48,9 +47,6 @@
 
 .services__heading {
   @include heading;
-
-  font-size: 16px;
-  line-height: 1;
 }
 
 .services__underline {
@@ -62,8 +58,6 @@
 
 .services__text {
   @include paragraph;
-
-  font-size: 16px;
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< tablet >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */

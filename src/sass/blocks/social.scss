@@ -14,7 +14,7 @@
 
   color: $gray-1;
 
-  transition: all 0.3s linear;
+  transition: $transition;
 
   &:hover {
     color: $cyan-1;

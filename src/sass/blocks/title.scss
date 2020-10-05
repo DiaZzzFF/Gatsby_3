@@ -8,9 +8,16 @@
   @include heading;
 
   font-size: 40px;
-  line-height: 1;
 }
 
 .title__underline {
   @include underline;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<< mobile >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+@media (max-width: $mobile-width) {
+  .title {
+    font-size: 32px;
+  }
 }

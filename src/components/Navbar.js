@@ -22,6 +22,7 @@ const Navbar = ({toggleSidebar}) => {
       <button
         className="navbar__toggle"
         type="button"
+        aria-label="Open sidebar"
         onClick={toggleSidebar}
       >
         <FaAlignRight className="navbar__toggle-img" />

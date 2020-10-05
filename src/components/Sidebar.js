@@ -11,6 +11,7 @@ const Sidebar = ({isOpen, toggleSidebar}) => {
       <button
         className="sidebar__close"
         type="button"
+        aria-label="Close sidebar"
         onClick={toggleSidebar}
       >
         <FaTimes className="sidebar__close-img" />
